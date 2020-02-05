@@ -17,7 +17,7 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Journal',
+      title: '', // Add title!
       template: './src/index.html',
       inject: 'body'
     })
@@ -32,13 +32,13 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jp(e*)g|svg)$/,  
+        test: /\.(png|jp(e*)g|svg)$/,
         use: [{
             loader: 'url-loader',
-            options: { 
+            options: {
                 limit: 8000,
                 name: 'images/[hash]-[name].[ext]'
-            } 
+            }
         }]
       },
       {
