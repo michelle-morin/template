@@ -1,5 +1,5 @@
 {
-  "name": "", // Add directory name
+  "name": "template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,13 +11,14 @@
     "debug": "node --inspect node_modules/.bin/jest --runInBand"
   },
   "keywords": [],
-  "author": "", // Add author name
+  "author": "Michelle Morin",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
+    "dotenv-webpack": "^1.7.0",
     "eslint": "^6.3.0",
     "eslint-loader": "^3.0.0",
     "file-loader": "^1.1.6",
