@@ -4,7 +4,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
-
 module.exports = {
   entry: './src/main.js',
   output: {
@@ -16,14 +15,14 @@ module.exports = {
     contentBase: './dist'
   },
   plugins: [
-    new Dotenv()
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'template', // Add title!
       template: './src/index.html',
       inject: 'body'
-    })
+    }),
+    new Dotenv()
   ],
   module: {
     rules: [
